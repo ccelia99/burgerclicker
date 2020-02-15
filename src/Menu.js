@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import iconburger from './images/icon-food.png';
 import iconcoupon from './images/icon-coupon.png';
@@ -7,9 +8,9 @@ import iconhuman from './images/icon-human.png';
 function Menu(props){
     return(
       <div className="menu">
-      <div><img src={iconburger} alt="game"/></div>
-      <div><img src={iconcoupon} alt="coupons"/><span className="badge">{props.claimableCoupons}</span></div>
-      <div><img src={iconhuman} alt="profile"/></div>
+        <Link to="/"><div><img src={iconburger} alt="game"/></div></Link>
+        <Link to="/coupons"><div><img src={iconcoupon} alt="coupons"/><span className="badge">{props.claimableCoupons}</span></div></Link>
+        <Link to="/profile"><div><img src={iconhuman} alt="profile"/></div></Link>
       </div>
     );
   }
