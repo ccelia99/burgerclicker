@@ -54,7 +54,9 @@ class Clicker extends Component {
           <Route path="/coupons" render={props => (
             <Coupons clicks={this.state.clicks} claimCoupon={this.claimCoupon} />
           )} />
-          <Route path="/profile" component={Profile} />
+          <Route path="/profile" render={props => (
+            <Profile coupons={this.state.coupons} />
+          )} />
           <Menu claimableCoupons={5} />
         </div>
       </Router>
