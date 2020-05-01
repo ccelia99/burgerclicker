@@ -26,7 +26,7 @@ class Game extends React.Component {
                 <div className="content content--justified">
                 <Stats count={this.props.clicks} />
                 <Burger onClick={this.mouseClicked} />
-                <Booster boost={5.3} />
+                <Booster boost={1} />
                 </div>
             </>
         );
